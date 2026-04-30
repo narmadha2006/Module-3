@@ -1,24 +1,34 @@
-# Tuple in Python: Check Element Existence
+# Strings-Palindrome Check in Python (Without Built-in Functions)
 
 ## 🎯 Aim
-To write a Python program that checks if the element `'n'` and the element `8` exist within a given tuple.
+To write a Python program to check whether the string `"google"` is a **palindrome** or not, without using built-in palindrome checking functions.
 
 ## 🧠 Algorithm
-1. Define a tuple `x` with some letters and numbers.
-2. Use the `in` operator to check if the string `'n'` exists within the tuple.
-3. Use the `in` operator to check if the integer `8` exists within the tuple.
-4. Print the results.
+1. Assign the string `"google"` to a variable.
+2. Reverse the string manually using slicing (`[::-1]`).
+3. Compare the original string with the reversed string.
+   - If they are equal, print that the string is a palindrome.
+   - Otherwise, print that it is not a palindrome.
+4. Execute the program.
 
 ## 🧾 Program
 ```
-tuplex = input()
-print("n" in tuplex)
-print("8" in tuplex)
+def is_palindrome_string(s):
+    length = len(s)
+    for i in range(length // 2):
+        if s[i] != s[length - i -1]:
+            return False
+        return True
+        
+s = input()
+if(is_palindrome_string(s)):
+    print("The entered string is palindrome")
+else:
+    print("The entered string is not palindrome")
 ```
 
 ## Output
-
-<img width="767" height="231" alt="517998301-b662aebf-531e-4554-9a34-3cf17eb1dd5c" src="https://github.com/user-attachments/assets/3f5ee36e-6add-4a15-b37a-03f2d2d27350" />
+<img width="416" height="57" alt="image" src="https://github.com/user-attachments/assets/07225718-3bed-4896-8656-fa48d4486629" />
 
 ## Result
-Thus the program executed successfully.
+The Python program was successfully executed to check whether a given string is a palindrome without using built-in palindrome functions
